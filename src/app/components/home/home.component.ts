@@ -12,11 +12,13 @@ export class HomeComponent implements OnInit {
   products!: ProductResponce;
   sub!: Subscription;
   list!: Product[];
+  // btnDisabled: HTMLButtonElement[] = [];
 
   constructor(private api: ApiServiceService) {}
 
   ngOnInit(): void {
     this.getProducts();
+    // this.checkDisabled();
   }
 
   getProducts() {
@@ -31,5 +33,13 @@ export class HomeComponent implements OnInit {
     this.api.addFavorite(item);
     const button = e.currentTarget as HTMLButtonElement;
     button.disabled = true;
+    // this.btnDisabled.push(button);
   }
+
+  // checkDisabled() {
+  //   console.log(this.btnDisabled);
+  //   this.btnDisabled.forEach((button) => {
+  //     button.disabled = true;
+  //   });
+  // }
 }

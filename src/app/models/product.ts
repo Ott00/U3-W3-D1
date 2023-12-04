@@ -18,3 +18,8 @@ export interface ProductResponce {
   skip: number;
   limit: number;
 }
+
+export interface CartItem extends Product {
+  amount: number;
+  totalPrice: number;
+}
