@@ -1,0 +1,34 @@
+<div class="container-fluid">
+  <div class="row mt-3">
+    <div class="col-8">
+      <div class="row gy-3">
+        <div class="col-4" *ngFor="let item of list">
+          <div class="card h-100">
+            <img
+              src="{{ item.thumbnail }}"
+              class="card-img-top h-75 object-fit-cover"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title text-truncate">{{ item.title }}</h5>
+              <p class="card-text text-truncate">
+                {{ item.description }}
+              </p>
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-primary">
+                  <i class="bi bi-cart-plus"></i> {{ item.price }}€
+                </button>
+                <button
+                  class="btn btn-danger"
+                  (click)="addFavorite(item, $event)"
+                >
+                  <i class="bi bi-heart-fill"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
