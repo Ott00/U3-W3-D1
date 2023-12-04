@@ -21,8 +21,7 @@ export class ApiServiceService {
     console.log(this.favorites);
   }
 
-  // removeFavorite(item: Product) {
-  //   const idToRemove = item.id
-  //   this.favorites = this.favorites.filter((item) => item.id !== item.idToRemove);
-  // }
+  removeFavorite(itemId: number) {
+    this.favorites = this.favorites.filter((product) => product.id !== itemId);
+  }
 }

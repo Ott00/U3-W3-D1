@@ -21,6 +21,8 @@ export class FavoritesComponent implements OnInit {
   }
 
   removeFavorite(item: Product) {
-    // this.api.removeFavorite(item);
+    this.api.removeFavorite(item.id);
+    this.getFavorite();
+    console.log(this.favorites);
   }
 }
