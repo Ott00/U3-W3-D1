@@ -18,7 +18,7 @@ export class ApiServiceService {
 
   addFavorite(item: Product) {
     this.favorites.push(item);
-    console.log(this.favorites);
+    // console.log(this.favorites);
   }
 
   removeFavorite(itemId: number) {

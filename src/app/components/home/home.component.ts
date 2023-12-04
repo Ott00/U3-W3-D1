@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
     this.sub = this.api.getProducts().subscribe((result) => {
       this.products = result;
       this.list = result.products;
-      console.log(this.list);
+      // console.log(this.list);
     });
   }
 

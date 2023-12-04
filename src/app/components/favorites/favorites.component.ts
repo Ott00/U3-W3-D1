@@ -13,7 +13,7 @@ export class FavoritesComponent implements OnInit {
 
   ngOnInit(): void {
     this.getFavorite();
-    console.log(this.favorites);
+    // console.log(this.favorites);
   }
 
   getFavorite() {
@@ -23,6 +23,6 @@ export class FavoritesComponent implements OnInit {
   removeFavorite(item: Product) {
     this.api.removeFavorite(item.id);
     this.getFavorite();
-    console.log(this.favorites);
+    // console.log(this.favorites);
   }
 }
